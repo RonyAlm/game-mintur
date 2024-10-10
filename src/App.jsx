@@ -35,7 +35,7 @@ function App() {
         <Quiz /> :
         <div className='content'>
           <figure className='logo'>
-            <img src="../public/assets/logo.png" alt="Formosa Hermosa" />
+            <img src="./assets/logo.png" alt="Formosa Hermosa" />
           </figure>
           <h1 ref={textTitle} className='title'>Jugá</h1>
           <h2 ref={textSubtitle} className='subtitle'>y divertite</h2>

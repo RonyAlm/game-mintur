@@ -97,7 +97,7 @@ export function Quiz() {
         <div className="container">
             <header className='header-container'>
                 <figure>
-                    <img src="../../public/assets/log.png" alt="Formosa Hermosa" className="logo" />
+                    <img src="../../assets/log.png" alt="Formosa Hermosa" className="logo" />
                 </figure>
             </header>
             {result ? (

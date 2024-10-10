@@ -1,77 +1,113 @@
-.container{
-    width: 100%;
+.container {
+    /* width: 100%; */
+    /* width: 700px; */
     background-color: white;
     color: #262626;
     display: flex;
     flex-direction: column;
+
     padding: 20px;
+    /* padding-top: 100px; */
     border-radius: 10px;
 }
 
-.container h2{
+.container h2 {
     margin-bottom: 10px;
 }
 
-.container ul{
+.container ul {
     list-style: none;
     margin: 0;
     padding: 0;
     margin-bottom: 10px;
+
 }
 
-.container ul li{
+.container ul li {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 10px;
     max-height: 70px;
     /* padding-left: 15px; */
-    border: 1px solid #686868;
+    border: 2px solid #074c28;
     font-size: 16px;
-    border-radius: 8px;
+    border-radius: 20px;
     margin-bottom: 20px;
     cursor: pointer;
 }
 
-.container .index{
+.container .index {
     text-align: center;
-    margin-top: 10px;
+    /* margin-top: 10px; */
+    font-weight: bold;
 }
 
-.correct{
-    background-color: rgba(32, 188, 32, 0.549);
-    color: white;
+.question-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 100%;
+    gap: 2rem;
+    width: 700px;
+    /* padding-top: 100px; */
 }
 
-.wrong{
-    background-color: rgba(255, 0, 0, 0.592);
-    color: white;
+.header-container{
+    height: auto;
+    padding: 20px;
+  
+    & img{
+        width: 150px;
+    }
+
+}
+
+.options-container {
+    padding: 0 20px;
+}
+
+.correct {
+    color: #155724;
+    background: #d4edda;
+    border-color: green !important;
+}
+
+.wrong {
+    color: #721c24;
+    background: #f8d7da;
+    border-color: #721c24 !important;
 }
 
 .timer-container {
     position: relative;
-    width: 100%;
-    height: 30px;
-    background-color: #e0e0e0; /* Color de fondo de la barra */
-    margin-bottom: 30px;
+    width: 95%;
+    height: 10px;
+    background-color: #e0e0e0;
+    margin: 0 auto;
+    margin-top: 3rem;
     border-radius: 8px;
+    margin-bottom: 2rem;
 }
 
 .timer-bar {
     height: 100%;
-    background-color: #76c7c0; /* Color de la barra que representa el tiempo */
-    transition: width 1s linear; /* Transición suave */
+    background: linear-gradient(#0cbd62, #5ac53b);
+    /* Color de la barra que representa el tiempo */
+    transition: width 1s linear;
+    /* Transición suave */
     border-radius: 8px;
+    /* padding:0 20px; */
 }
 
 .timer-text {
     position: absolute;
     width: 100%;
-     /* Centrar verticalmente el texto */
-    top: 2px;
+    /* Centrar verticalmente el texto */
+    top: -30px;
     font-weight: bold;
     right: 0;
-    color: #262626;
+    color: #074c28;
 }
 
 .img-container {
@@ -87,4 +123,27 @@
     max-height: 100%;
     border-radius: 10px;
     aspect-ratio: 3/2;
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.icon-crown img {
+    width: 100px;
+}
+
+.restart-btn {
+    margin-top: 20px;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 20px;
 }

@@ -1,6 +1,7 @@
 import { useRef, useState, useEffect } from 'react'
 import './Quiz.css'
 import { data } from '../../assets/data.js'
+import confetti from 'canvas-confetti'
 
 export function Quiz() {
     const [questions, setQuestions] = useState([]) // Estado para almacenar las preguntas aleatorias
@@ -45,6 +46,23 @@ export function Quiz() {
         return () => clearInterval(timer) // Limpiar el temporizador
     }, [timeLeft, lock, question])
 
+    useEffect(() => {
+        // Mostrar confetti solo cuando el resultado es verdadero y el score es mayor a 5
+        if (result && score > 5) {
+            confetti({
+                spread: 120,
+                particleCount: 100,
+                origin: { y: 0.6 }
+            })
+        }
+
+        if( result ){
+            setTimeout(()=>{
+                window.location.reload()
+            }, 30000)
+        }
+    }, [result, score])
+
     const checkAnswer = (e, ans) => {
         if (!lock) {
             if (question.ans === ans) {
@@ -77,34 +95,55 @@ export function Quiz() {
 
     return (
         <div className="container">
+            <header className='header-container'>
+                <figure>
+                    <img src="../../public/assets/log.png" alt="Formosa Hermosa" className="logo" />
+                </figure>
+            </header>
             {result ? (
                 <div className="result">
+                    {score > 5 && (
+                        <div className="icon-crown">
+                            <img src="https://www.dropbox.com/s/2b81pov6c4nuev3/crown.png?dl=1" alt="Crown" />
+                        </div>
+                    )}
+                    <h3 className="complete-text">¡Has completado las Preguntas! 👏</h3>
                     <h2>Tu puntaje es: {score}</h2>
-                    <button onClick={() => window.location.reload()}>Reiniciar</button>
+                    <button onClick={() => window.location.reload()} className='restart-btn'>Reiniciar</button>
                 </div>
             ) : (
                 <>
                     {question && (
-                        <> 
+                        <div className="question-container">
                             {/* <figure className="img-container">
                                 <img src={question.image} alt={question.question}/>
                             </figure> */}
-                            <h3>{index + 1}. {question.question}</h3>
-                            <ul>
-                                <li ref={Option1} onClick={(e) => checkAnswer(e, 1)}>{question.option1}</li>
-                                <li ref={Option2} onClick={(e) => checkAnswer(e, 2)}>{question.option2}</li>
-                                <li ref={Option3} onClick={(e) => checkAnswer(e, 3)}>{question.option3}</li>
-                            </ul>
-                            <div className="timer-container">
-                                <div
-                                    className="timer-bar"
-                                    style={{ width: `${(timeLeft / 60) * 100}%` }}
-                                ></div>
-                                <div className="timer-text">{timeLeft}s</div>
-                            </div>
-                            <button onClick={handleClickNext}>Siguiente</button>
-                            <div className='index'>{index + 1} de {questions.length} preguntas</div>
-                        </>
+                            <h2>{index + 1}. {question.question}</h2>
+                            <section className="options-container">
+                                <ul className="options">
+                                    <li ref={Option1} onClick={(e) => checkAnswer(e, 1)}>
+                                        {question.option1}
+                                    </li>
+                                    <li ref={Option2} onClick={(e) => checkAnswer(e, 2)}>
+                                        {question.option2}
+                                    </li>
+                                    <li ref={Option3} onClick={(e) => checkAnswer(e, 3)}>
+                                        {question.option3}
+                                    </li>
+                                </ul>
+                                <div className="timer-container">
+                                    <div
+                                        className="timer-bar"
+                                        style={{ width: `${(timeLeft / 60) * 100}%` }}
+                                    ></div>
+                                    <div className="timer-text">Tiempo restante: {timeLeft}s</div>
+                                </div>
+                                <div className='footer-container'>
+                                    <div className='index'>{index + 1} de {questions.length} preguntas</div>
+                                    <button onClick={handleClickNext} className='next-btn'>Siguiente</button>
+                                </div>
+                            </section>
+                        </div>
                     )}
                 </>
             )}

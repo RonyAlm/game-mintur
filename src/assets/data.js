@@ -122,16 +122,16 @@ export let data = [
         ans: 1,
         used: false
     },
-    {
-        number: 13,
-        question: "¿A qué localidad corresponde el Parque Acuático de la imagen?",
-        image: "../../assets/img/questions/013.jpg",
-        option1: "Villa Escolar",
-        option2: "El Colorado",
-        option3: "Pozo del Tigre",
-        ans: 2,
-        used: false
-    },
+    // {
+    //     number: 13,
+    //     question: "¿A qué localidad corresponde el Parque Acuático de la imagen?",
+    //     image: "../../assets/img/questions/013.jpg",
+    //     option1: "Villa Escolar",
+    //     option2: "El Colorado",
+    //     option3: "Pozo del Tigre",
+    //     ans: 2,
+    //     used: false
+    // },
     {
         number: 14,
         question: "Si llegamos a Fortín Soledad, ¿qué atractivo turístico podemos visitar?",
@@ -499,7 +499,7 @@ export let data = [
         option1: "Laguna Naineck",
         option2: "Herradura",
         option3: "Clorinda",
-        ans: 3,
+        ans: 2,
         used: false
     },
     {
@@ -672,16 +672,16 @@ export let data = [
         ans: 1,
         used: false
     },
-    {
-        number: 68,
-        question: "¿Cómo se llama este espacio de recreación en la ciudad de Formosa?",
-        image: "../../assets/img/questions/068.jpg",
-        option1: "Plaza San Martín",
-        option2: "Paseo del Río",
-        option3: "Paraíso de los Niños",
-        ans: 2,
-        used: false
-    },
+    // {
+    //     number: 68,
+    //     question: "¿Cómo se llama este espacio de recreación en la ciudad de Formosa?",
+    //     image: "../../assets/img/questions/068.jpg",
+    //     option1: "Plaza San Martín",
+    //     option2: "Paseo del Río",
+    //     option3: "Paraíso de los Niños",
+    //     ans: 2,
+    //     used: false
+    // },
     {
         number: 69,
         question: "¿Qué atractivo turístico fué elegido como una de las 7 Maravillas Naturales de la Argentina?",
@@ -712,16 +712,16 @@ export let data = [
         ans: 3,
         used: false
     },
-    {
-        number: 72,
-        question: "¿Cómo se llama este mural?",
-        image: "../../assets/img/questions/072.jpg",
-        option1: "Formosa, Fe y Esperanza",
-        option2: "Cementerio Virgen del Carmen",
-        option3: "La Inmensidad",
-        ans: 1,
-        used: false
-    },
+    // {
+    //     number: 72,
+    //     question: "¿Cómo se llama este mural?",
+    //     image: "../../assets/img/questions/072.jpg",
+    //     option1: "Formosa, Fe y Esperanza",
+    //     option2: "Cementerio Virgen del Carmen",
+    //     option3: "La Inmensidad",
+    //     ans: 1,
+    //     used: false
+    // },
     {
         number: 73,
         question: "¿Dónde descansan los restos del Dr. Gutnisky, primer Gobernador Constitucional de Formosa?",

@@ -122,16 +122,16 @@ export let data = [
         ans: 1,
         used: false
     },
-    {
-        number: 13,
-        question: "¿A qué localidad corresponde el Parque Acuático de la imagen?",
-        image: "../../assets/img/questions/013.jpg",
-        option1: "Villa Escolar",
-        option2: "El Colorado",
-        option3: "Pozo del Tigre",
-        ans: 2,
-        used: false
-    },
+    // {
+    //     number: 13,
+    //     question: "¿A qué localidad corresponde el Parque Acuático de la imagen?",
+    //     image: "../../assets/img/questions/013.jpg",
+    //     option1: "Villa Escolar",
+    //     option2: "El Colorado",
+    //     option3: "Pozo del Tigre",
+    //     ans: 2,
+    //     used: false
+    // },
     {
         number: 14,
         question: "Si llegamos a Fortín Soledad, ¿qué atractivo turístico podemos visitar?",

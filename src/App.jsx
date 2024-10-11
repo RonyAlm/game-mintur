@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import './App.css'
 import { Quiz } from './components/Quiz/Quiz'
-import SpiralText  from './components/SpiralText'
 
 import gsap from 'gsap'
 
